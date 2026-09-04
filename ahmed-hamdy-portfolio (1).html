@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Hamdy — Customer Service Specialist</title>
+<meta name="description" content="Ahmed Hamdy — English-speaking Customer Service & Call Center Specialist, 3+ years experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   0. DESIGN TOKENS
+   ========================================================================== */
+:root{
+  /* colors */
+  --navy-950:#060910;
+  --navy-900:#0A0F1E;
+  --navy-850:#0D1326;
+  --navy-800:#111A34;
+  --navy-700:#182448;
+  --navy-600:#22315C;
+  --line:rgba(255,255,255,0.09);
+  --line-strong:rgba(255,255,255,0.16);
+  --blue-500:#3E7BFA;
+  --blue-400:#6C9BFF;
+  --blue-300:#9FBBFF;
+  --teal-400:#2FD4C4;
+  --white:#F6F8FC;
+  --gray-200:#C9D2E6;
+  --gray-300:#A9B4CE;
+  --gray-500:#7887A8;
+  --gray-600:#5B6789;
+
+  /* on-light (cards that sit on white in print-like sections) */
+  --paper:#F7F9FD;
+
+  /* spacing (8px system) */
+  --sp-1:8px; --sp-2:16px; --sp-3:24px; --sp-4:32px; --sp-5:40px;
+  --sp-6:48px; --sp-7:56px; --sp-8:64px; --sp-9:72px; --sp-10:80px;
+  --sp-12:96px; --sp-14:112px; --sp-16:128px;
+
+  /* radius */
+  --r-sm:12px; --r-md:16px; --r-lg:24px; --r-xl:32px; --r-pill:999px;
+
+  /* shadow */
+  --shadow-sm: 0 4px 16px rgba(3,6,16,0.28);
+  --shadow-md: 0 12px 32px rgba(3,6,16,0.38);
+  --shadow-lg: 0 24px 64px rgba(3,6,16,0.48);
+  --shadow-glow: 0 0 0 1px rgba(110,150,255,0.14), 0 20px 60px rgba(62,123,250,0.18);
+
+  /* type */
+  --font-head:'Manrope', sans-serif;
+  --font-body:'Inter', sans-serif;
+
+  /* motion */
+  --ease: cubic-bezier(.22,.8,.32,1);
+  --dur-1: .22s;
+  --dur-2: .45s;
+  --dur-3: .7s;
+
+  --container: 1200px;
+}
+
+/* ---------------- LIGHT THEME OVERRIDES ---------------- */
+[data-theme="light"]{
+  --navy-950:#F4F6FB;
+  --navy-900:#ECF0F8;
+  --navy-850:#FFFFFF;
+  --navy-800:#FFFFFF;
+  --navy-700:#F2F5FC;
+  --navy-600:#D8E0F0;
+  --line:rgba(15,23,42,0.08);
+  --line-strong:rgba(15,23,42,0.14);
+  --blue-500:#2F63E0;
+  --blue-400:#3E7BFA;
+  --blue-300:#2E5FD9;
+  --teal-400:#12968A;
+  --white:#0B1220;
+  --gray-200:#2E3B57;
+  --gray-300:#46536F;
+  --gray-500:#67748F;
+  --gray-600:#8894AC;
+  --shadow-sm: 0 4px 16px rgba(20,35,70,0.08);
+  --shadow-md: 0 12px 32px rgba(20,35,70,0.10);
+  --shadow-lg: 0 24px 64px rgba(20,35,70,0.14);
+  --shadow-glow: 0 0 0 1px rgba(47,99,224,0.16), 0 20px 60px rgba(47,99,224,0.16);
+}
+[data-theme="light"] .navbar.scrolled{
+  background:rgba(244,246,251,0.78);
+  box-shadow: 0 1px 0 var(--line), 0 12px 32px rgba(20,35,70,0.10);
+}
+[data-theme="light"] .mobile-menu{ background:rgba(244,246,251,0.98); }
+[data-theme="light"] .hero::before{ opacity:.6; }
+[data-theme="light"] .hero::after{ opacity:.5; }
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--navy-950);
+  color:var(--white);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  transition: background-color .5s var(--ease), color .5s var(--ease);
+}
+img,svg{ display:block; max-width:100%; }
+a{ color:inherit; text-decoration:none; }
+button{ font-family:inherit; cursor:pointer; }
+ul{ margin:0; padding:0; list-style:none; }
+h1,h2,h3,h4,p{ margin:0; }
+
+::selection{ background:var(--blue-500); color:#fff; }
+
+:focus-visible{
+  outline: 2px solid var(--blue-400);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.container{
+  width:100%;
+  max-width:var(--container);
+  margin-inline:auto;
+  padding-inline: var(--sp-4);
+}
+
+.section{
+  padding-block: var(--sp-14);
+  position:relative;
+}
+.section-alt{ background:var(--navy-900); transition: background-color .5s var(--ease); }
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:var(--sp-1);
+  font-family:var(--font-head);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.01em;
+  color:var(--blue-300);
+  background:rgba(62,123,250,0.12);
+  border:1px solid rgba(110,150,255,0.28);
+  padding:6px 14px;
+  border-radius:var(--r-pill);
+}
+
+.section-head{
+  max-width:640px;
+  margin-bottom:var(--sp-8);
+}
+.section-head h2{
+  font-family:var(--font-head);
+  font-weight:800;
+  font-size:clamp(28px,4vw,42px);
+  letter-spacing:-0.01em;
+  color:var(--white);
+  margin-top:var(--sp-2);
+}
+.section-head p{
+  margin-top:var(--sp-3);
+  color:var(--gray-300);
+  font-size:17px;
+  max-width:60ch;
+}
+.section-head.center{ margin-inline:auto; text-align:center; }
+.section-head.center p{ margin-inline:auto; }
+
+/* buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:var(--sp-1);
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:15px;
+  padding:14px 26px;
+  border-radius:var(--r-pill);
+  border:1px solid transparent;
+  transition: transform var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease), background var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease);
+  white-space:nowrap;
+}
+.btn:active{ transform:scale(.97); }
+.btn-primary{
+  background:linear-gradient(135deg,var(--blue-500),#2f63e0);
+  color:#fff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover{ transform:translateY(-2px) scale(1.015); box-shadow: var(--shadow-glow); }
+.btn-secondary{
+  background:rgba(255,255,255,0.04);
+  color:var(--white);
+  border-color:var(--line-strong);
+  transition: transform var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease), background var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease), color .5s var(--ease);
+}
+.btn-secondary:hover{ transform:translateY(-2px); background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.3); }
+.btn-secondary.on-light{ color:var(--navy-900); border-color:rgba(10,15,30,0.14); background:rgba(10,15,30,0.03); }
+.btn-secondary.on-light:hover{ background:rgba(10,15,30,0.07); }
+.btn[disabled]{ opacity:.45; cursor:not-allowed; transform:none; box-shadow:none; }
+.btn-sm{ padding:10px 18px; font-size:14px; }
+
+/* reveal on scroll */
+.reveal{
+  opacity:0;
+  transform: translateY(28px);
+  transition: opacity var(--dur-3) var(--ease), transform var(--dur-3) var(--ease);
+}
+.reveal.in-view{ opacity:1; transform:none; }
+.reveal-stagger > * { transition-delay: calc(var(--i,0) * 80ms); }
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *, *::before, *::after{
+    animation-duration:0.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:0.001ms !important;
+    scroll-behavior:auto !important;
+  }
+  .reveal{ opacity:1 !important; transform:none !important; }
+  .float, .orbit-badge{ animation:none !important; }
+}
+
+/* ==========================================================================
+   1. NAVBAR
+   ========================================================================== */
+.navbar{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  padding-block: var(--sp-3);
+  transition: padding var(--dur-2) var(--ease), background var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease), backdrop-filter var(--dur-2) var(--ease);
+}
+.navbar .container{
+  display:flex; align-items:center; justify-content:space-between;
+}
+.navbar.scrolled{
+  padding-block: var(--sp-2);
+  background:rgba(6,9,16,0.72);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: 0 1px 0 var(--line), 0 12px 32px rgba(0,0,0,0.28);
+}
+.brand{
+  font-family:var(--font-head);
+  font-weight:800;
+  font-size:20px;
+  letter-spacing:.02em;
+  color:var(--white);
+  display:flex; align-items:center; gap:10px;
+}
+.brand-mark{
+  width:34px; height:34px; border-radius:10px;
+  background:linear-gradient(135deg,var(--blue-500),var(--teal-400));
+  display:flex; align-items:center; justify-content:center;
+  font-size:14px; font-weight:800; color:#04101f;
+}
+.nav-links{
+  display:flex; align-items:center; gap:var(--sp-5);
+}
+.nav-links a{
+  font-family:var(--font-head);
+  font-size:14.5px; font-weight:600;
+  color:var(--gray-300);
+  position:relative;
+  padding-block:4px;
+  transition: color var(--dur-1) var(--ease);
+}
+.nav-links a::after{
+  content:''; position:absolute; left:0; bottom:-2px; height:2px; width:0;
+  background:var(--blue-400); transition: width var(--dur-2) var(--ease);
+}
+.nav-links a:hover{ color:var(--white); }
+.nav-links a:hover::after{ width:100%; }
+.nav-right{ display:flex; align-items:center; gap:var(--sp-3); }
+.nav-cta{ display:inline-flex; }
+
+.theme-toggle{
+  width:40px; height:40px; border-radius:12px;
+  border:1px solid var(--line-strong);
+  background:rgba(255,255,255,0.04);
+  display:flex; align-items:center; justify-content:center;
+  position:relative; flex-shrink:0;
+  transition: transform var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease), background-color .5s var(--ease);
+}
+[data-theme="light"] .theme-toggle{ background:rgba(11,18,32,0.04); }
+.theme-toggle:hover{ transform:translateY(-2px) rotate(-6deg); border-color:var(--blue-400); }
+.theme-toggle svg{
+  position:absolute; width:18px; height:18px; color:var(--gray-200);
+  transition: opacity .4s var(--ease), transform .55s var(--ease);
+}
+.theme-toggle .icon-moon{ opacity:1; transform:rotate(0deg) scale(1); }
+.theme-toggle .icon-sun{ opacity:0; transform:rotate(-90deg) scale(.5); }
+[data-theme="light"] .theme-toggle .icon-moon{ opacity:0; transform:rotate(90deg) scale(.5); }
+[data-theme="light"] .theme-toggle .icon-sun{ opacity:1; transform:rotate(0deg) scale(1); }
+
+.hamburger{
+  display:none;
+  width:42px; height:42px;
+  border-radius:12px;
+  border:1px solid var(--line-strong);
+  background:rgba(255,255,255,0.04);
+  align-items:center; justify-content:center;
+  position:relative;
+}
+.hamburger span, .hamburger span::before, .hamburger span::after{
+  content:''; display:block; width:18px; height:2px; background:var(--white); border-radius:2px;
+  transition: transform var(--dur-2) var(--ease), opacity var(--dur-2) var(--ease);
+}
+.hamburger span{ position:relative; }
+.hamburger span::before{ position:absolute; top:-6px; left:0; }
+.hamburger span::after{ position:absolute; top:6px; left:0; }
+.hamburger.open span{ background:transparent; }
+.hamburger.open span::before{ transform:translateY(6px) rotate(45deg); }
+.hamburger.open span::after{ transform:translateY(-6px) rotate(-45deg); }
+
+.mobile-menu{
+  position:fixed; inset:0; z-index:90;
+  background:rgba(6,9,16,0.98);
+  backdrop-filter: blur(10px);
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:var(--sp-4);
+  opacity:0; visibility:hidden;
+  transform: translateY(-12px);
+  transition: opacity var(--dur-2) var(--ease), transform var(--dur-2) var(--ease), visibility 0s linear var(--dur-2);
+}
+.mobile-menu.open{
+  opacity:1; visibility:visible; transform:none;
+  transition: opacity var(--dur-2) var(--ease), transform var(--dur-2) var(--ease), visibility 0s;
+}
+.mobile-menu a{
+  font-family:var(--font-head); font-size:24px; font-weight:700; color:var(--white);
+}
+.mobile-menu .btn{ margin-top:var(--sp-3); }
+
+/* ==========================================================================
+   2. HERO
+   ========================================================================== */
+.hero{
+  padding-top: calc(var(--sp-16) + var(--sp-4));
+  padding-bottom: var(--sp-14);
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute; top:-20%; right:-10%;
+  width:640px; height:640px;
+  background: radial-gradient(circle, rgba(62,123,250,0.22), transparent 70%);
+  filter:blur(10px);
+  pointer-events:none;
+}
+.hero::after{
+  content:'';
+  position:absolute; bottom:-30%; left:-15%;
+  width:520px; height:520px;
+  background: radial-gradient(circle, rgba(47,212,196,0.14), transparent 70%);
+  pointer-events:none;
+}
+.hero-grid{
+  position:relative; z-index:1;
+  display:grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: var(--sp-10);
+  align-items:center;
+}
+.hero-copy .badge-line{ margin-bottom:var(--sp-3); }
+.hero-copy h1{
+  font-family:var(--font-head);
+  font-weight:800;
+  font-size:clamp(34px, 5vw, 56px);
+  line-height:1.08;
+  letter-spacing:-0.02em;
+  color:var(--white);
+  max-width:15ch;
+}
+.hero-copy p.lead{
+  margin-top:var(--sp-4);
+  font-size:18px;
+  color:var(--gray-300);
+  max-width:52ch;
+}
+.hero-actions{
+  display:flex; gap:var(--sp-2); margin-top:var(--sp-6); flex-wrap:wrap;
+}
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:var(--sp-3);
+  margin-top:var(--sp-9);
+  border-top:1px solid var(--line);
+  padding-top:var(--sp-5);
+}
+.stat-num{
+  font-family:var(--font-head); font-weight:800; font-size:28px; color:var(--white);
+  display:flex; align-items:baseline; gap:2px;
+}
+.stat-label{ margin-top:6px; font-size:13px; color:var(--gray-500); font-weight:500; line-height:1.35; }
+
+/* hero visual */
+.hero-visual{
+  position:relative;
+  display:flex; align-items:center; justify-content:center;
+  height:480px;
+}
+.float{ animation: floatY 6s ease-in-out infinite; }
+@keyframes floatY{
+  0%,100%{ transform:translateY(0px); }
+  50%{ transform:translateY(-14px); }
+}
+.visual-card{
+  position:relative;
+  width:300px; height:360px;
+  border-radius:var(--r-xl);
+  background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+  border:1px solid var(--line-strong);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-lg);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:var(--sp-5);
+}
+.monogram{
+  width:104px; height:104px; border-radius:28px;
+  background:linear-gradient(135deg,var(--blue-500),var(--teal-400));
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-head); font-weight:800; font-size:36px; color:#04101f;
+  box-shadow: 0 16px 40px rgba(62,123,250,0.35);
+}
+.visual-name{ margin-top:var(--sp-3); font-family:var(--font-head); font-weight:700; font-size:18px; color:var(--white); }
+.visual-role{ margin-top:4px; font-size:13px; color:var(--gray-500); text-align:center; }
+
+.waveform{
+  display:flex; align-items:flex-end; gap:4px; height:36px; margin-top:var(--sp-4);
+}
+.waveform span{
+  width:4px; border-radius:2px;
+  background:linear-gradient(180deg,var(--blue-400),var(--teal-400));
+  animation: wave 1.6s ease-in-out infinite;
+}
+.waveform span:nth-child(1){ height:40%; animation-delay:0s; }
+.waveform span:nth-child(2){ height:70%; animation-delay:.12s; }
+.waveform span:nth-child(3){ height:100%; animation-delay:.24s; }
+.waveform span:nth-child(4){ height:55%; animation-delay:.36s; }
+.waveform span:nth-child(5){ height:85%; animation-delay:.48s; }
+.waveform span:nth-child(6){ height:35%; animation-delay:.6s; }
+.waveform span:nth-child(7){ height:65%; animation-delay:.72s; }
+@keyframes wave{
+  0%,100%{ transform:scaleY(0.5); opacity:.7; }
+  50%{ transform:scaleY(1); opacity:1; }
+}
+
+.orbit-badge{
+  position:absolute;
+  width:56px; height:56px; border-radius:16px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid var(--line-strong);
+  backdrop-filter: blur(12px);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: var(--shadow-sm);
+  transition: background-color .5s var(--ease), border-color .5s var(--ease);
+}
+[data-theme="light"] .orbit-badge{ background:rgba(11,18,32,0.04); }
+.orbit-badge svg{ width:24px; height:24px; }
+.badge-1{ top:6%; left:-4%; animation: orbit1 9s ease-in-out infinite; }
+.badge-2{ bottom:10%; right:-6%; animation: orbit2 10.5s ease-in-out infinite; animation-delay:.5s; }
+.badge-3{ top:44%; right:-10%; animation: orbit3 8s ease-in-out infinite; animation-delay:1.1s; }
+
+/* smooth, organic multi-point drift for each hero badge — not a simple up/down bob */
+@keyframes orbit1{
+  0%,100%{ transform: translate(0,0) rotate(0deg); }
+  22%{ transform: translate(7px,-12px) rotate(4deg); }
+  50%{ transform: translate(-5px,-20px) rotate(-3deg); }
+  78%{ transform: translate(-9px,-6px) rotate(2deg); }
+}
+@keyframes orbit2{
+  0%,100%{ transform: translate(0,0) rotate(0deg); }
+  25%{ transform: translate(-8px,-10px) rotate(-4deg); }
+  55%{ transform: translate(-2px,-22px) rotate(3deg); }
+  80%{ transform: translate(8px,-8px) rotate(-2deg); }
+}
+@keyframes orbit3{
+  0%,100%{ transform: translate(0,0) rotate(0deg); }
+  30%{ transform: translate(-9px,8px) rotate(3deg); }
+  60%{ transform: translate(6px,16px) rotate(-4deg); }
+  85%{ transform: translate(9px,4px) rotate(2deg); }
+}
+
+/* ==========================================================================
+   3. ABOUT
+   ========================================================================== */
+.about-grid{
+  display:grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--sp-10);
+  align-items:start;
+}
+.about-copy p{
+  color:var(--gray-300);
+  font-size:16.5px;
+  margin-bottom:var(--sp-3);
+  max-width:62ch;
+}
+.about-copy p strong{ color:var(--white); font-weight:600; }
+.tag-cloud{
+  display:flex; flex-wrap:wrap; gap:10px;
+  margin-top:var(--sp-5);
+}
+.tag{
+  font-family:var(--font-head);
+  font-size:13.5px; font-weight:600;
+  color:var(--gray-200);
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--line-strong);
+  padding:8px 16px;
+  border-radius:var(--r-pill);
+  transition: transform var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease), color var(--dur-1) var(--ease);
+}
+.tag:hover{ transform:translateY(-2px); border-color:var(--blue-400); color:var(--white); }
+
+.about-panel{
+  background:linear-gradient(160deg, var(--navy-800), var(--navy-850));
+  border:1px solid var(--line);
+  border-radius:var(--r-xl);
+  padding:var(--sp-6);
+  transition: background .5s var(--ease), border-color .5s var(--ease);
+}
+.about-panel-row{
+  display:flex; gap:var(--sp-3);
+  padding-block:var(--sp-3);
+  border-bottom:1px solid var(--line);
+}
+.about-panel-row:last-child{ border-bottom:none; }
+.about-panel-icon{
+  width:44px; height:44px; border-radius:var(--r-sm);
+  background:rgba(62,123,250,0.14);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.about-panel-icon svg{ width:20px; height:20px; color:var(--blue-300); }
+.about-panel-text h4{ font-family:var(--font-head); font-size:15.5px; font-weight:700; color:var(--white); }
+.about-panel-text p{ margin-top:4px; font-size:14px; color:var(--gray-500); }
+
+/* ==========================================================================
+   4. EXPERIENCE (timeline)
+   ========================================================================== */
+.timeline{
+  position:relative;
+  max-width:760px;
+  margin-inline:auto;
+  padding-left:var(--sp-8);
+}
+.timeline-line{
+  position:absolute; left:15px; top:6px; bottom:6px; width:2px;
+  background:var(--line);
+  border-radius:2px;
+  overflow:hidden;
+}
+.timeline-line-fill{
+  position:absolute; top:0; left:0; width:100%; height:0%;
+  background:linear-gradient(180deg,var(--blue-500),var(--teal-400));
+  transition: height .5s var(--ease);
+}
+.timeline-item{
+  position:relative;
+  padding-bottom:var(--sp-8);
+}
+.timeline-item:last-child{ padding-bottom:0; }
+.timeline-dot{
+  position:absolute; left:calc(-1 * var(--sp-8) + 7px); top:4px;
+  width:18px; height:18px; border-radius:50%;
+  background:var(--navy-950);
+  border:2px solid var(--gray-600);
+  transition: border-color var(--dur-2) var(--ease), background var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease);
+}
+.timeline-item.in-view .timeline-dot{
+  border-color:var(--blue-400);
+  background:var(--blue-500);
+  box-shadow: 0 0 0 5px rgba(62,123,250,0.16);
+}
+.timeline-card{
+  background:var(--navy-800);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:var(--sp-5);
+  transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease), background-color .5s var(--ease), color .5s var(--ease);
+}
+.timeline-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--line-strong); }
+.timeline-head{
+  display:flex; align-items:center; justify-content:space-between; gap:var(--sp-2); flex-wrap:wrap;
+  margin-bottom:var(--sp-2);
+}
+.timeline-head h3{ font-family:var(--font-head); font-size:19px; font-weight:700; color:var(--white); }
+.timeline-tag{
+  font-family:var(--font-head); font-size:12px; font-weight:700; letter-spacing:.02em;
+  color:var(--teal-400); background:rgba(47,212,196,0.1); border:1px solid rgba(47,212,196,0.28);
+  padding:4px 12px; border-radius:var(--r-pill); white-space:nowrap;
+}
+.timeline-card p{ color:var(--gray-300); font-size:15px; }
+
+.experience-highlight{
+  margin-top:var(--sp-8);
+  max-width:760px; margin-inline:auto;
+  display:flex; align-items:center; gap:var(--sp-3);
+  background:linear-gradient(120deg, rgba(62,123,250,0.12), rgba(47,212,196,0.08));
+  border:1px solid rgba(110,150,255,0.24);
+  border-radius:var(--r-lg);
+  padding:var(--sp-4) var(--sp-5);
+}
+.experience-highlight svg{ width:28px; height:28px; color:var(--blue-300); flex-shrink:0; }
+.experience-highlight strong{ font-family:var(--font-head); font-weight:800; font-size:17px; color:var(--white); display:block; }
+.experience-highlight span{ font-size:13.5px; color:var(--gray-300); }
+
+/* ==========================================================================
+   5. SERVICES (cards grid)
+   ========================================================================== */
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:var(--sp-4);
+}
+.service-card{
+  background:var(--navy-800);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:var(--sp-5);
+  transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease), background-color .5s var(--ease), color .5s var(--ease);
+}
+.service-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-md);
+  border-color:rgba(110,150,255,0.3);
+}
+.service-icon{
+  width:52px; height:52px; border-radius:var(--r-sm);
+  background:linear-gradient(135deg, rgba(62,123,250,0.18), rgba(47,212,196,0.12));
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom:var(--sp-3);
+  transition: transform var(--dur-2) var(--ease);
+}
+.service-card:hover .service-icon{ transform:scale(1.08) rotate(-4deg); }
+.service-icon svg{ width:24px; height:24px; color:var(--blue-300); }
+.service-card h3{ font-family:var(--font-head); font-weight:700; font-size:17px; color:var(--white); margin-bottom:6px; }
+.service-card p{ font-size:14.5px; color:var(--gray-500); }
+
+/* ==========================================================================
+   6. EXPERTISE
+   ========================================================================== */
+.featured-skill{
+  background:linear-gradient(135deg, var(--navy-800), var(--navy-700));
+  border:1px solid rgba(110,150,255,0.24);
+  border-radius:var(--r-xl);
+  padding:var(--sp-6);
+  display:flex; align-items:center; justify-content:space-between; gap:var(--sp-5);
+  margin-bottom:var(--sp-6);
+  flex-wrap:wrap;
+  transition: background .5s var(--ease);
+}
+.featured-skill-text .eyebrow{ margin-bottom:var(--sp-2); }
+.featured-skill h3{ font-family:var(--font-head); font-weight:800; font-size:26px; color:var(--white); }
+.featured-skill p{ margin-top:6px; color:var(--gray-300); font-size:15px; max-width:44ch; }
+.featured-waveform{ display:flex; gap:5px; align-items:flex-end; height:52px; }
+.featured-waveform span{
+  width:6px; border-radius:3px;
+  background:linear-gradient(180deg,var(--blue-400),var(--teal-400));
+  opacity:.35; transform:scaleY(.3); transform-origin:bottom;
+  transition: transform .5s var(--ease), opacity .5s var(--ease);
+}
+.featured-waveform.in-view span{ opacity:1; }
+.featured-waveform span:nth-child(1){ height:38%; }
+.featured-waveform span:nth-child(2){ height:62%; }
+.featured-waveform span:nth-child(3){ height:100%; }
+.featured-waveform span:nth-child(4){ height:48%; }
+.featured-waveform span:nth-child(5){ height:80%; }
+.featured-waveform span:nth-child(6){ height:56%; }
+.featured-waveform span:nth-child(7){ height:34%; }
+.featured-waveform.in-view span{ transform:scaleY(1); }
+.featured-waveform.in-view span:nth-child(1){ transition-delay:.05s; }
+.featured-waveform.in-view span:nth-child(2){ transition-delay:.1s; }
+.featured-waveform.in-view span:nth-child(3){ transition-delay:.15s; }
+.featured-waveform.in-view span:nth-child(4){ transition-delay:.2s; }
+.featured-waveform.in-view span:nth-child(5){ transition-delay:.25s; }
+.featured-waveform.in-view span:nth-child(6){ transition-delay:.3s; }
+.featured-waveform.in-view span:nth-child(7){ transition-delay:.35s; }
+
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
+  gap:var(--sp-3);
+}
+.skill-chip{
+  display:flex; align-items:center; gap:var(--sp-2);
+  background:var(--navy-800);
+  border:1px solid var(--line);
+  border-radius:var(--r-md);
+  padding:var(--sp-3);
+  opacity:0; transform:translateY(14px) scale(.98);
+  transition: opacity .5s var(--ease), transform .5s var(--ease), border-color var(--dur-1) var(--ease), background-color .5s var(--ease), color .5s var(--ease);
+}
+.skill-chip.in-view{ opacity:1; transform:none; }
+.skill-chip:hover{ border-color:rgba(110,150,255,0.32); }
+.skill-chip-icon{
+  width:36px; height:36px; border-radius:10px; flex-shrink:0;
+  background:rgba(62,123,250,0.12);
+  display:flex; align-items:center; justify-content:center;
+}
+.skill-chip-icon svg{ width:17px; height:17px; color:var(--blue-300); }
+.skill-chip-name{ font-family:var(--font-head); font-size:14.5px; font-weight:700; color:var(--white); }
+.skill-chip-bar{
+  margin-top:3px; height:3px; width:100%; border-radius:2px; background:var(--line); overflow:hidden;
+}
+.skill-chip-bar span{
+  display:block; height:100%; width:0%;
+  background:linear-gradient(90deg,var(--blue-500),var(--teal-400));
+  transition: width 1s var(--ease);
+}
+.skill-chip.in-view .skill-chip-bar span{ width:100%; }
+
+.expertise-highlight{
+  margin-top:var(--sp-7);
+  text-align:center;
+}
+.expertise-highlight p{
+  font-family:var(--font-head); font-weight:700; font-size:clamp(18px,2.4vw,24px);
+  color:var(--white); max-width:36ch; margin-inline:auto; line-height:1.4;
+}
+.expertise-highlight p .dim{ color:var(--gray-500); }
+
+/* ==========================================================================
+   7. PROCESS
+   ========================================================================== */
+.process-list{
+  position:relative;
+  max-width:820px; margin-inline:auto;
+}
+.process-line{
+  position:absolute; left:27px; top:10px; bottom:10px; width:2px;
+  background:var(--line); border-radius:2px; overflow:hidden;
+}
+.process-line-fill{
+  position:absolute; top:0; left:0; width:100%; height:0%;
+  background:linear-gradient(180deg,var(--blue-500),var(--teal-400));
+  transition: height .5s var(--ease);
+}
+.process-step{
+  display:flex; gap:var(--sp-4);
+  padding-block:var(--sp-4);
+  position:relative;
+}
+.process-num{
+  flex-shrink:0;
+  width:56px; height:56px; border-radius:var(--r-md);
+  background:var(--navy-800);
+  border:2px solid var(--gray-600);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-head); font-weight:800; font-size:17px; color:var(--gray-500);
+  transition: all var(--dur-2) var(--ease);
+  z-index:1;
+}
+.process-step.in-view .process-num{
+  border-color:var(--blue-400);
+  color:var(--white);
+  background:linear-gradient(135deg,var(--blue-500),#2f63e0);
+  box-shadow: 0 0 0 6px rgba(62,123,250,0.14);
+}
+.process-body{ padding-top:8px; }
+.process-body h3{ font-family:var(--font-head); font-weight:700; font-size:18.5px; color:var(--white); }
+.process-body p{ margin-top:6px; font-size:15px; color:var(--gray-500); max-width:52ch; }
+
+/* ==========================================================================
+   8. PROJECTS
+   ========================================================================== */
+.project-note{
+  font-size:13.5px; color:var(--gray-500); margin-top:-var(--sp-4); margin-bottom:var(--sp-6);
+}
+.grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:var(--sp-4); }
+.project-card{
+  background:var(--navy-800);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease), background-color .5s var(--ease), border-color .5s var(--ease);
+}
+.project-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-md); }
+.project-visual{
+  height:140px;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg, var(--navy-700), var(--navy-800));
+  display:flex; align-items:center; justify-content:center;
+}
+.project-visual svg{
+  width:56px; height:56px; color:var(--blue-300); opacity:.85;
+  transition: transform var(--dur-3) var(--ease);
+}
+.project-card:hover .project-visual svg{ transform:scale(1.18) rotate(3deg); }
+.project-visual::after{
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(circle at 30% 20%, rgba(62,123,250,0.22), transparent 60%);
+}
+.project-type{
+  position:absolute; top:14px; left:14px;
+  font-family:var(--font-head); font-size:11.5px; font-weight:700; letter-spacing:.02em;
+  color:#04101f; background:var(--teal-400);
+  padding:4px 12px; border-radius:var(--r-pill); z-index:1;
+}
+.project-body{ padding:var(--sp-4); }
+.project-body h3{ font-family:var(--font-head); font-weight:700; font-size:18px; color:var(--white); margin-bottom:var(--sp-3); }
+.project-block{ margin-bottom:var(--sp-2); }
+.project-block h4{ font-family:var(--font-head); font-size:12.5px; font-weight:700; letter-spacing:.02em; color:var(--blue-300); text-transform:uppercase; }
+.project-block p{ margin-top:3px; font-size:14px; color:var(--gray-300); }
+.project-skills{ display:flex; flex-wrap:wrap; gap:6px; margin-top:var(--sp-3); }
+.project-skill-pill{
+  font-size:12px; font-weight:600; color:var(--gray-300);
+  background:rgba(255,255,255,0.04); border:1px solid var(--line-strong);
+  padding:4px 10px; border-radius:var(--r-pill);
+}
+
+/* ==========================================================================
+   9. QUALITY
+   ========================================================================== */
+.grid-5{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:var(--sp-3);
+}
+.quality-card{
+  background:var(--navy-800);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:var(--sp-4);
+  text-align:center;
+  transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease), background-color .5s var(--ease);
+}
+.quality-card:hover{ transform:translateY(-5px); box-shadow:var(--shadow-md); }
+.quality-icon{
+  width:46px; height:46px; border-radius:12px;
+  margin-inline:auto; margin-bottom:var(--sp-2);
+  background:rgba(62,123,250,0.14);
+  display:flex; align-items:center; justify-content:center;
+}
+.quality-icon svg{ width:21px; height:21px; color:var(--blue-300); }
+.quality-card h4{ font-family:var(--font-head); font-weight:700; font-size:14.5px; color:var(--white); }
+
+/* ==========================================================================
+   10. TOOLS
+   ========================================================================== */
+.grid-4{ display:grid; grid-template-columns:repeat(4,1fr); gap:var(--sp-3); }
+.tool-card{
+  background:var(--navy-800);
+  border:1px solid var(--line);
+  border-radius:var(--r-md);
+  padding:var(--sp-3) var(--sp-3);
+  display:flex; align-items:center; gap:var(--sp-2);
+  transition: transform var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease), background-color .5s var(--ease);
+}
+.tool-card:hover{ transform:translateY(-3px); border-color:rgba(110,150,255,0.28); }
+.tool-icon{
+  width:36px; height:36px; border-radius:9px; flex-shrink:0;
+  background:rgba(47,212,196,0.12);
+  display:flex; align-items:center; justify-content:center;
+}
+.tool-icon svg{ width:17px; height:17px; color:var(--teal-400); }
+.tool-card span{ font-family:var(--font-head); font-size:13.5px; font-weight:600; color:var(--gray-200); }
+.tools-note{ margin-top:var(--sp-5); color:var(--gray-500); font-size:14.5px; text-align:center; }
+
+/* ==========================================================================
+   11. VALUES
+   ========================================================================== */
+.grid-4-values{ display:grid; grid-template-columns:repeat(4,1fr); gap:var(--sp-3); }
+.value-card{
+  background:linear-gradient(160deg, var(--navy-800), var(--navy-850));
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:var(--sp-5);
+  position:relative;
+  transition: transform var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease), background .5s var(--ease);
+}
+.value-card:hover{ transform:translateY(-5px); border-color:rgba(110,150,255,0.28); }
+.value-quote-mark{ font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--blue-500); opacity:.5; line-height:1; }
+.value-card p{ margin-top:var(--sp-2); font-family:var(--font-head); font-weight:600; font-size:15.5px; color:var(--white); line-height:1.45; }
+
+/* ==========================================================================
+   12. CTA
+   ========================================================================== */
+.cta-section{
+  position:relative;
+  border-radius:var(--r-xl);
+  margin-inline:var(--sp-4);
+  padding:var(--sp-10) var(--sp-6);
+  background:linear-gradient(135deg, var(--navy-800), var(--navy-700));
+  border:1px solid rgba(110,150,255,0.24);
+  text-align:center;
+  overflow:hidden;
+}
+.cta-section::before{
+  content:'';
+  position:absolute; inset:0;
+  background:radial-gradient(circle at 50% 0%, rgba(62,123,250,0.28), transparent 60%);
+  pointer-events:none;
+}
+.cta-section h2{
+  position:relative;
+  font-family:var(--font-head); font-weight:800; font-size:clamp(26px,4vw,38px);
+  color:var(--white); max-width:20ch; margin-inline:auto;
+}
+.cta-section p{
+  position:relative;
+  margin-top:var(--sp-3); color:var(--gray-300); font-size:16.5px; max-width:60ch; margin-inline:auto;
+}
+.cta-actions{ position:relative; display:flex; gap:var(--sp-2); justify-content:center; margin-top:var(--sp-6); flex-wrap:wrap; }
+.cta-pulse{ animation: pulseGlow 3s ease-in-out infinite; }
+@keyframes pulseGlow{
+  0%,100%{ box-shadow: var(--shadow-sm); }
+  50%{ box-shadow: var(--shadow-glow); }
+}
+
+/* ==========================================================================
+   13. CONTACT
+   ========================================================================== */
+.contact-grid{
+  display:grid; grid-template-columns: 1fr 1.15fr; gap:var(--sp-8);
+}
+.contact-info-card{
+  display:flex; align-items:center; gap:var(--sp-3);
+  background:var(--navy-800);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:var(--sp-4);
+  margin-bottom:var(--sp-3);
+  transition: transform var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease), background-color .5s var(--ease);
+}
+.contact-info-card:hover{ transform:translateY(-3px); border-color:rgba(110,150,255,0.28); }
+.contact-info-icon{
+  width:44px; height:44px; border-radius:12px; flex-shrink:0;
+  background:rgba(62,123,250,0.14);
+  display:flex; align-items:center; justify-content:center;
+}
+.contact-info-icon svg{ width:19px; height:19px; color:var(--blue-300); }
+.contact-info-text h4{ font-family:var(--font-head); font-size:14px; font-weight:700; color:var(--white); }
+.contact-info-text p{ margin-top:2px; font-size:13.5px; color:var(--gray-500); }
+.placeholder-note{
+  margin-top:var(--sp-2);
+  font-size:12.5px;
+  color:var(--gray-600);
+  border-left:2px solid var(--line-strong);
+  padding-left:var(--sp-2);
+}
+
+.form-card{
+  background:var(--navy-800);
+  border:1px solid var(--line);
+  border-radius:var(--r-xl);
+  padding:var(--sp-6);
+  transition: background-color .5s var(--ease), border-color .5s var(--ease);
+}
+.form-row{ margin-bottom:var(--sp-4); }
+.form-row-2{ display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-3); }
+.form-label{
+  display:block; font-family:var(--font-head); font-size:13.5px; font-weight:700; color:var(--gray-200);
+  margin-bottom:8px;
+}
+.form-input, .form-textarea{
+  width:100%;
+  background:var(--navy-900);
+  border:1px solid var(--line-strong);
+  border-radius:var(--r-sm);
+  padding:14px 16px;
+  color:var(--white);
+  font-family:var(--font-body);
+  font-size:15px;
+  transition: border-color var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease), background-color .5s var(--ease), color .5s var(--ease);
+}
+.form-input::placeholder, .form-textarea::placeholder{ color:var(--gray-600); }
+.form-input:focus, .form-textarea:focus{
+  border-color:var(--blue-400);
+  box-shadow: 0 0 0 4px rgba(62,123,250,0.16);
+}
+.form-textarea{ resize:vertical; min-height:130px; }
+.form-input.error, .form-textarea.error{ border-color:#F16565; box-shadow:0 0 0 4px rgba(241,101,101,0.12); }
+.form-error-msg{
+  display:none;
+  margin-top:6px; font-size:13px; color:#F58A8A;
+}
+.form-row.has-error .form-error-msg{ display:block; }
+.form-submit-row{ display:flex; align-items:center; gap:var(--sp-3); flex-wrap:wrap; }
+.form-success{
+  display:none;
+  align-items:center; gap:10px;
+  background:rgba(47,212,196,0.1);
+  border:1px solid rgba(47,212,196,0.3);
+  color:var(--teal-400);
+  padding:14px 18px;
+  border-radius:var(--r-sm);
+  font-size:14.5px; font-weight:600;
+  margin-top:var(--sp-3);
+}
+.form-success.show{ display:flex; }
+.form-success svg{ width:18px; height:18px; flex-shrink:0; }
+
+/* ==========================================================================
+   14. FOOTER
+   ========================================================================== */
+.footer{
+  border-top:1px solid var(--line);
+  padding-block: var(--sp-8) var(--sp-6);
+  background:var(--navy-900);
+  transition: background-color .5s var(--ease), border-color .5s var(--ease);
+}
+.footer-top{
+  display:flex; justify-content:space-between; gap:var(--sp-6); flex-wrap:wrap;
+  padding-bottom:var(--sp-6);
+}
+.footer-brand p{ margin-top:var(--sp-2); color:var(--gray-500); font-size:14px; max-width:34ch; }
+.footer-brand .stat-label{ margin-top:var(--sp-2); }
+.footer-links{ display:flex; gap:var(--sp-8); flex-wrap:wrap; }
+.footer-col h5{ font-family:var(--font-head); font-size:13px; font-weight:700; color:var(--gray-300); letter-spacing:.02em; margin-bottom:var(--sp-2); }
+.footer-col ul li{ margin-bottom:8px; }
+.footer-col ul li a{ font-size:14px; color:var(--gray-500); transition: color var(--dur-1) var(--ease); }
+.footer-col ul li a:hover{ color:var(--white); }
+.footer-socials{ display:flex; gap:10px; }
+.footer-social{
+  width:38px; height:38px; border-radius:10px;
+  border:1px solid var(--line-strong);
+  display:flex; align-items:center; justify-content:center;
+  transition: transform var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease);
+}
+.footer-social:hover{ transform:translateY(-3px); border-color:var(--blue-400); }
+.footer-social svg{ width:16px; height:16px; color:var(--gray-300); }
+.footer-bottom{
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--sp-2);
+  padding-top:var(--sp-5);
+  border-top:1px solid var(--line);
+  font-size:13px; color:var(--gray-600);
+}
+
+/* ==========================================================================
+   15. RESPONSIVE — TABLET (≤ 900px maps to ~768 design)
+   ========================================================================== */
+@media (max-width: 980px){
+  .nav-links, .nav-right .btn-secondary{ display:none; }
+  .hamburger{ display:flex; }
+  .hero-grid{ grid-template-columns:1fr; }
+  .hero-visual{ height:380px; order:-1; }
+  .hero-copy h1{ max-width:none; }
+  .about-grid{ grid-template-columns:1fr; }
+  .grid-3{ grid-template-columns:repeat(2,1fr); }
+  .grid-5{ grid-template-columns:repeat(3,1fr); }
+  .grid-4{ grid-template-columns:repeat(2,1fr); }
+  .grid-4-values{ grid-template-columns:repeat(2,1fr); }
+  .grid-2{ grid-template-columns:1fr; }
+  .contact-grid{ grid-template-columns:1fr; }
+  .form-row-2{ grid-template-columns:1fr; }
+  .hero-stats{ grid-template-columns:repeat(2,1fr); row-gap:var(--sp-4); }
+}
+
+/* ==========================================================================
+   16. RESPONSIVE — MOBILE (≤ 480px maps to ~390 design)
+   ========================================================================== */
+@media (max-width: 480px){
+  .container{ padding-inline:var(--sp-3); }
+  .section{ padding-block:var(--sp-10); }
+  .hero{ padding-top:calc(var(--sp-14)); }
+  .grid-3, .grid-5, .grid-4, .grid-4-values{ grid-template-columns:1fr; }
+  .featured-skill{ flex-direction:column; align-items:flex-start; }
+  .featured-waveform{ align-self:flex-start; }
+  .cta-section{ margin-inline:var(--sp-2); padding:var(--sp-8) var(--sp-3); }
+  .hero-actions .btn, .cta-actions .btn{ width:100%; }
+  .hero-visual{ height:340px; }
+  .visual-card{ width:260px; height:320px; }
+  .footer-top{ flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========================================================================
+     NAVBAR
+     ======================================================================== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="#home" class="brand"><span class="brand-mark">AH</span>HAMDY</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <a href="#contact" class="btn btn-secondary btn-sm">Let's Talk</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="mnav">Home</a>
+  <a href="#about" class="mnav">About</a>
+  <a href="#experience" class="mnav">Experience</a>
+  <a href="#services" class="mnav">Services</a>
+  <a href="#expertise" class="mnav">Expertise</a>
+  <a href="#projects" class="mnav">Projects</a>
+  <a href="#contact" class="mnav">Contact</a>
+  <a href="#contact" class="btn btn-primary mnav">Let's Talk</a>
+</div>
+
+<!-- ========================================================================
+     HERO
+     ======================================================================== -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="badge-line reveal"><span class="eyebrow">3+ Years of Customer Service Experience</span></div>
+      <h1 class="reveal">Turning Every Customer Interaction Into a Better Experience.</h1>
+      <p class="lead reveal">Hi, I'm Ahmed Hamdy — an experienced English-speaking Customer Service Specialist with 3+ years of experience helping customers, resolving problems, and delivering professional support.</p>
+      <div class="hero-actions reveal">
+        <a href="#experience" class="btn btn-primary">View My Experience</a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <div class="stat-num"><span class="count-up" data-target="3">0</span>+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">B2+</div>
+          <div class="stat-label">English Level</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" style="font-size:19px;">Customer</div>
+          <div class="stat-label">Focused</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" style="font-size:19px;">Problem</div>
+          <div class="stat-label">Solver</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="visual-card float">
+        <div class="monogram">AH</div>
+        <div class="visual-name">Ahmed Hamdy</div>
+        <div class="visual-role">Customer Service &amp; Call Center Specialist</div>
+        <div class="waveform" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="orbit-badge badge-1" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:var(--blue-300)"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3z"/><path d="M3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg>
+      </div>
+      <div class="orbit-badge badge-2" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:var(--teal-400)"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <div class="orbit-badge badge-3" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:var(--blue-300)"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     ABOUT
+     ======================================================================== -->
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <span class="eyebrow">About Me</span>
+        <h2 style="font-family:var(--font-head); font-weight:800; font-size:clamp(26px,3.6vw,36px); margin-top:var(--sp-3); color:var(--white);">A steady, attentive presence for every customer.</h2>
+      </div>
+      <div class="about-copy reveal">
+        <p>Over <strong>3+ years</strong>, I've worked in customer-facing roles — including at <strong>Foundever</strong> and other companies — communicating with customers, understanding their needs, and working toward clear, effective solutions.</p>
+        <p>My approach is simple: <strong>listen first</strong>, understand what the customer is really asking, and respond with patience and clarity. Whether it's a straightforward question or a more difficult situation, I stay calm, communicate clearly, and focus on getting to a solution that works.</p>
+        <p>My goal in every interaction is the same — understand the customer, solve their problem, and leave them with a positive experience.</p>
+        <div class="tag-cloud">
+          <span class="tag">Customer Service</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Active Listening</span>
+          <span class="tag">Problem Solving</span>
+          <span class="tag">Empathy</span>
+          <span class="tag">Patience</span>
+          <span class="tag">Teamwork</span>
+          <span class="tag">Adaptability</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     EXPERIENCE
+     ======================================================================== -->
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Career Path</span>
+      <h2>Professional Experience</h2>
+      <p>A steady progression of customer-facing roles focused on communication, patience, and effective problem-solving.</p>
+    </div>
+
+    <div class="timeline" id="timeline">
+      <div class="timeline-line"><div class="timeline-line-fill" id="timelineFill"></div></div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <h3>Foundever</h3>
+            <span class="timeline-tag">Customer Service</span>
+          </div>
+          <p>Worked in a professional customer service environment, communicating with customers, understanding their needs, handling inquiries, and working toward effective solutions.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <h3>Previous Customer Service Experience</h3>
+            <span class="timeline-tag">Customer Service</span>
+          </div>
+          <p>Additional customer service experience developing communication, problem-solving, customer handling, and adaptability skills.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-highlight reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+      <div>
+        <strong>3+ Years of Professional Experience</strong>
+        <span>Consistent, hands-on customer service across multiple roles.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     SERVICES
+     ======================================================================== -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Services</span>
+      <h2>What I Do Best</h2>
+      <p>Practical, everyday customer service skills applied consistently — not a checklist, a way of working.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3z"/><path d="M3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></div>
+        <h3>Customer Support</h3>
+        <p>Friendly and efficient assistance from the first message to the last.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L14.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div>
+        <h3>Complaint Handling</h3>
+        <p>Calm and professional resolution, even in difficult moments.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div>
+        <h3>Problem Solving</h3>
+        <p>Practical, clear-headed solutions to customer issues.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Customer Communication</h3>
+        <p>Clear, confident communication that avoids confusion.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div>
+        <h3>Email &amp; Chat Support</h3>
+        <p>Professional written communication across digital channels.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3>Customer Experience</h3>
+        <p>Positive interactions that build trust, one conversation at a time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     EXPERTISE
+     ======================================================================== -->
+<section class="section" id="expertise">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Expertise</span>
+      <h2>Core Expertise</h2>
+      <p>A practical skill set built through real customer conversations, not a certificate list.</p>
+    </div>
+
+    <div class="featured-skill reveal">
+      <div class="featured-skill-text">
+        <span class="eyebrow">Featured Skill</span>
+        <h3>English Communication — B2+</h3>
+        <p>Confident, clear spoken and written English for professional customer conversations.</p>
+      </div>
+      <div class="featured-waveform" id="featuredWave" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="skill-grid">
+      <div class="skill-chip"><div class="skill-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3z"/><path d="M3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></div><div style="flex:1"><div class="skill-chip-name">Customer Service</div><div class="skill-chip-bar"><span></span></div></div></div>
+      <div class="skill-chip"><div class="skill-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.5 21v-2a4 4 0 0 0-4-4h-5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div style="flex:1"><div class="skill-chip-name">Active Listening</div><div class="skill-chip-bar"><span></span></div></div></div>
+      <div class="skill-chip"><div class="skill-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 9v4"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg></div><div style="flex:1"><div class="skill-chip-name">Complaint Resolution</div><div class="skill-chip-bar"><span></span></div></div></div>
+      <div class="skill-chip"><div class="skill-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div><div style="flex:1"><div class="skill-chip-name">Problem Solving</div><div class="skill-chip-bar"><span></span></div></div></div>
+      <div class="skill-chip"><div class="skill-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div style="flex:1"><div class="skill-chip-name">Empathy</div><div class="skill-chip-bar"><span></span></div></div></div>
+      <div class="skill-chip"><div class="skill-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><div style="flex:1"><div class="skill-chip-name">Conflict Management</div><div class="skill-chip-bar"><span></span></div></div></div>
+      <div class="skill-chip"><div class="skill-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div><div style="flex:1"><div class="skill-chip-name">Teamwork</div><div class="skill-chip-bar"><span></span></div></div></div>
+      <div class="skill-chip"><div class="skill-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></div><div style="flex:1"><div class="skill-chip-name">Time Management</div><div class="skill-chip-bar"><span></span></div></div></div>
+      <div class="skill-chip"><div class="skill-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"/></svg></div><div style="flex:1"><div class="skill-chip-name">Adaptability</div><div class="skill-chip-bar"><span></span></div></div></div>
+      <div class="skill-chip"><div class="skill-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div><div style="flex:1"><div class="skill-chip-name">Email &amp; Chat Support</div><div class="skill-chip-bar"><span></span></div></div></div>
+    </div>
+
+    <div class="expertise-highlight reveal">
+      <p>Listen. Understand. Solve. <span class="dim">Deliver a better experience.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PROCESS
+     ======================================================================== -->
+<section class="section section-alt" id="process">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Process</span>
+      <h2>How I Handle Customer Interactions</h2>
+      <p>A consistent five-step approach applied to every conversation, simple or complex.</p>
+    </div>
+
+    <div class="process-list" id="processList">
+      <div class="process-line"><div class="process-line-fill" id="processFill"></div></div>
+
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div class="process-body"><h3>Listen</h3><p>Understand the situation fully before responding.</p></div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div class="process-body"><h3>Understand</h3><p>Identify the real issue behind the customer's question.</p></div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div class="process-body"><h3>Empathize</h3><p>Respond with patience and respect, whatever the tone.</p></div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div class="process-body"><h3>Resolve</h3><p>Provide the appropriate solution, clearly explained.</p></div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">05</div>
+        <div class="process-body"><h3>Confirm</h3><p>Make sure the customer feels heard and supported.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PROJECTS
+     ======================================================================== -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Projects</span>
+      <h2>Customer Service Scenarios</h2>
+      <p>Portfolio scenarios illustrating how I approach common customer service situations — not real clients or case results.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="project-card reveal">
+        <div class="project-visual">
+          <span class="project-type">Customer Scenario</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+        </div>
+        <div class="project-body">
+          <h3>Order &amp; Delivery Inquiry</h3>
+          <div class="project-block"><h4>Situation</h4><p>A customer contacted support with an urgent question about the status of an order and needed clarity quickly.</p></div>
+          <div class="project-block"><h4>Approach</h4><p>Listened carefully to understand the concern, asked clarifying questions, and checked the relevant information calmly.</p></div>
+          <div class="project-block"><h4>Solution</h4><p>Provided a clear, accurate update and reassured the customer with a confident, steady tone.</p></div>
+          <div class="project-skills">
+            <span class="project-skill-pill">Active Listening</span>
+            <span class="project-skill-pill">Clear Communication</span>
+            <span class="project-skill-pill">Patience</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-visual">
+          <span class="project-type">Complaint Resolution</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L14.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+        </div>
+        <div class="project-body">
+          <h3>Frustrated Customer Complaint</h3>
+          <div class="project-block"><h4>Situation</h4><p>A customer reached out visibly frustrated after experiencing an issue with their order or service.</p></div>
+          <div class="project-block"><h4>Approach</h4><p>Stayed calm, acknowledged the frustration without becoming defensive, and focused on understanding the root cause.</p></div>
+          <div class="project-block"><h4>Solution</h4><p>Walked the customer through the available options and agreed on a fair, workable resolution.</p></div>
+          <div class="project-skills">
+            <span class="project-skill-pill">Empathy</span>
+            <span class="project-skill-pill">Conflict Management</span>
+            <span class="project-skill-pill">Problem Solving</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-visual">
+          <span class="project-type">Customer Inquiry</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </div>
+        <div class="project-body">
+          <h3>Detailed Product Inquiry</h3>
+          <div class="project-block"><h4>Situation</h4><p>A customer needed more information before making a decision and had several detailed questions.</p></div>
+          <div class="project-block"><h4>Approach</h4><p>Took time to explain each point clearly, avoiding jargon and checking understanding along the way.</p></div>
+          <div class="project-block"><h4>Solution</h4><p>The customer left the conversation with the clarity needed to move forward confidently.</p></div>
+          <div class="project-skills">
+            <span class="project-skill-pill">Communication</span>
+            <span class="project-skill-pill">Adaptability</span>
+            <span class="project-skill-pill">Patience</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-visual">
+          <span class="project-type">Customer Experience</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="project-body">
+          <h3>Routine Interaction, Elevated</h3>
+          <div class="project-block"><h4>Situation</h4><p>A routine interaction that could easily have felt transactional and forgettable.</p></div>
+          <div class="project-block"><h4>Approach</h4><p>Focused on tone, warmth, and attentiveness throughout — not just closing the request.</p></div>
+          <div class="project-block"><h4>Solution</h4><p>Left the customer with a respectful, positive experience, not just a resolved ticket.</p></div>
+          <div class="project-skills">
+            <span class="project-skill-pill">Customer Focus</span>
+            <span class="project-skill-pill">Communication</span>
+            <span class="project-skill-pill">Professionalism</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     QUALITY
+     ======================================================================== -->
+<section class="section section-alt" id="quality">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Standards</span>
+      <h2>Quality &amp; Professionalism</h2>
+      <p>Professional customer service requires consistency, accuracy, responsibility, and attention to detail. I focus on reliable information, company procedures, customer privacy, and professional communication.</p>
+    </div>
+
+    <div class="grid-5">
+      <div class="quality-card reveal">
+        <div class="quality-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h4>Reliability</h4>
+      </div>
+      <div class="quality-card reveal">
+        <div class="quality-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg></div>
+        <h4>Professionalism</h4>
+      </div>
+      <div class="quality-card reveal">
+        <div class="quality-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/></svg></div>
+        <h4>Data Privacy</h4>
+      </div>
+      <div class="quality-card reveal">
+        <div class="quality-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h4>Attention to Detail</h4>
+      </div>
+      <div class="quality-card reveal">
+        <div class="quality-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h4>Customer Satisfaction</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     TOOLS
+     ======================================================================== -->
+<section class="section" id="tools">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Tools &amp; Platforms</span>
+      <h2>Comfortable Across Common Systems</h2>
+      <p>I'm comfortable adapting to different systems, workflows, tools, and company processes.</p>
+    </div>
+
+    <div class="grid-4">
+      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg></div><span>CRM Systems</span></div>
+      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3 8-8"/><path d="M21 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11"/></svg></div><span>Ticketing Systems</span></div>
+      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><span>Live Chat</span></div>
+      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div><span>Email Support</span></div>
+      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div><span>Microsoft Office</span></div>
+      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><span>Google Workspace</span></div>
+      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0z"/></svg></div><span>Communication Tools</span></div>
+      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3z"/><path d="M3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></div><span>Support Platforms</span></div>
+    </div>
+    <p class="tools-note reveal">Specific tools vary by employer — I adapt quickly to whatever a company already uses.</p>
+  </div>
+</section>
+
+<!-- ========================================================================
+     VALUES
+     ======================================================================== -->
+<section class="section section-alt" id="values">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Philosophy</span>
+      <h2>What I Believe In</h2>
+    </div>
+
+    <div class="grid-4-values">
+      <div class="value-card reveal"><span class="value-quote-mark">“</span><p>Every customer deserves to be heard.</p></div>
+      <div class="value-card reveal"><span class="value-quote-mark">“</span><p>Good communication creates trust.</p></div>
+      <div class="value-card reveal"><span class="value-quote-mark">“</span><p>Stay calm. Understand the problem. Find the solution.</p></div>
+      <div class="value-card reveal"><span class="value-quote-mark">“</span><p>Professionalism should be consistent in every interaction.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     CTA
+     ======================================================================== -->
+<section class="section">
+  <div class="container">
+    <div class="cta-section reveal">
+      <h2>Ready to Deliver Better Customer Experiences?</h2>
+      <p>With 3+ years of customer service experience, B2+ English communication skills, and a strong problem-solving mindset, I'm ready to bring professionalism, empathy, and customer focus to my next opportunity.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-primary cta-pulse">Contact Ahmed</a>
+        <a href="#" class="btn btn-secondary" id="downloadCvBtn">Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     CONTACT
+     ======================================================================== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Let's Connect</h2>
+      <p>Have an opportunity or a question? Send a message and I'll get back to you.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div>
+          <div class="contact-info-text">
+            <h4>Email</h4>
+            <p>your.email@example.com</p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M8 9h4v2a4 4 0 0 1 8 0v9h-4v-8a2 2 0 0 0-4 0v8H8z"/></svg></div>
+          <div class="contact-info-text">
+            <h4>LinkedIn</h4>
+            <p>linkedin.com/in/yourprofile</p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div class="contact-info-text">
+            <h4>WhatsApp</h4>
+            <p>+20 ••• ••• ••••</p>
+          </div>
+        </div>
+        <p class="placeholder-note">These are placeholders — swap in the real email, LinkedIn URL, and WhatsApp number before publishing.</p>
+      </div>
+
+      <div class="contact-form reveal">
+        <form class="form-card" id="contactForm" novalidate>
+          <div class="form-row-2">
+            <div class="form-row" id="row-name">
+              <label class="form-label" for="f-name">Name</label>
+              <input class="form-input" type="text" id="f-name" name="name" placeholder="Your full name" autocomplete="name">
+              <div class="form-error-msg">Please enter your name.</div>
+            </div>
+            <div class="form-row" id="row-email">
+              <label class="form-label" for="f-email">Email</label>
+              <input class="form-input" type="email" id="f-email" name="email" placeholder="you@example.com" autocomplete="email">
+              <div class="form-error-msg">Please enter a valid email address.</div>
+            </div>
+          </div>
+          <div class="form-row" id="row-subject">
+            <label class="form-label" for="f-subject">Subject</label>
+            <input class="form-input" type="text" id="f-subject" name="subject" placeholder="What is this about?">
+            <div class="form-error-msg">Please enter a subject.</div>
+          </div>
+          <div class="form-row" id="row-message">
+            <label class="form-label" for="f-message">Message</label>
+            <textarea class="form-textarea" id="f-message" name="message" placeholder="Write your message here..."></textarea>
+            <div class="form-error-msg">Message should be at least 10 characters.</div>
+          </div>
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Your message is ready to send — thanks for reaching out!</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     FOOTER
+     ======================================================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="brand"><span class="brand-mark">AH</span>HAMDY</a>
+        <p>English Customer Service Specialist · 3+ Years Experience | B2+ English</p>
+        <p style="margin-top:var(--sp-2); color:var(--gray-500);">Professional communication. Practical solutions. Better customer experiences.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M8 9h4v2a4 4 0 0 1 8 0v9h-4v-8a2 2 0 0 0-4 0v8H8z"/></svg></a>
+            <a href="#" class="footer-social" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ahmed Hamdy. All rights reserved.</span>
+      <span>Built with care for great customer experiences.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Theme toggle (dark / light) ---------- */
+  var root = document.documentElement;
+  var themeToggle = document.getElementById('themeToggle');
+  var storedTheme = null;
+  try { storedTheme = localStorage.getItem('ahmed-portfolio-theme'); } catch(e){}
+  var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  var initialTheme = storedTheme || (prefersLight ? 'light' : 'dark');
+  if (initialTheme === 'light') root.setAttribute('data-theme', 'light');
+
+  function updateToggleState(){
+    var isLight = root.getAttribute('data-theme') === 'light';
+    themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+  }
+  updateToggleState();
+
+  themeToggle.addEventListener('click', function(){
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight){
+      root.removeAttribute('data-theme');
+      try { localStorage.setItem('ahmed-portfolio-theme', 'dark'); } catch(e){}
+    } else {
+      root.setAttribute('data-theme', 'light');
+      try { localStorage.setItem('ahmed-portfolio-theme', 'light'); } catch(e){}
+    }
+    updateToggleState();
+  });
+
+  /* ---------- Navbar sticky + blur ---------- */
+  var navbar = document.getElementById('navbar');
+  function onScroll(){
+    if (window.scrollY > 24) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- Mobile menu ---------- */
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  function closeMenu(){
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded','false');
+    mobileMenu.classList.remove('open');
+  }
+  hamburger.addEventListener('click', function(){
+    var isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true':'false');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(function(a){
+    a.addEventListener('click', closeMenu);
+  });
+
+  /* ---------- Scroll reveal ---------- */
+  var revealEls = document.querySelectorAll('.reveal, .skill-chip, .timeline-item, .process-step');
+  if (reduceMotion){
+    revealEls.forEach(function(el){ el.classList.add('in-view'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---------- Featured waveform reveal ---------- */
+  var featuredWave = document.getElementById('featuredWave');
+  if (featuredWave){
+    if (reduceMotion){ featuredWave.classList.add('in-view'); }
+    else{
+      var wIo = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting){ entry.target.classList.add('in-view'); wIo.unobserve(entry.target); }
+        });
+      }, {threshold:.4});
+      wIo.observe(featuredWave);
+    }
+  }
+
+  /* ---------- Count-up stat ---------- */
+  var counters = document.querySelectorAll('.count-up');
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+    if (reduceMotion){ el.textContent = target; return; }
+    var start = 0, duration = 900, startTime = null;
+    function step(ts){
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      el.textContent = Math.floor(progress * (target - start) + start);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  var cIo = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){ animateCount(entry.target); cIo.unobserve(entry.target); }
+    });
+  }, {threshold:.6});
+  counters.forEach(function(c){ cIo.observe(c); });
+
+  /* ---------- Timeline progressive fill ---------- */
+  function setupProgressFill(itemsSelector, fillEl){
+    var items = document.querySelectorAll(itemsSelector);
+    if (!items.length || !fillEl) return;
+    var seen = new Set();
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          seen.add(entry.target);
+          var pct = (seen.size / items.length) * 100;
+          fillEl.style.height = pct + '%';
+        }
+      });
+    }, { threshold: 0.5 });
+    items.forEach(function(el){ io2.observe(el); });
+    if (reduceMotion){
+      items.forEach(function(el){ el.classList.add('in-view'); });
+      fillEl.style.height = '100%';
+    }
+  }
+  setupProgressFill('.timeline-item', document.getElementById('timelineFill'));
+  setupProgressFill('.process-step', document.getElementById('processFill'));
+
+  /* ---------- Contact form validation ---------- */
+  var form = document.getElementById('contactForm');
+  var successBox = document.getElementById('formSuccess');
+  function setError(rowId, hasError){
+    var row = document.getElementById(rowId);
+    row.classList.toggle('has-error', hasError);
+    var input = row.querySelector('.form-input, .form-textarea');
+    input.classList.toggle('error', hasError);
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    successBox.classList.remove('show');
+
+    var name = document.getElementById('f-name').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var subject = document.getElementById('f-subject').value.trim();
+    var message = document.getElementById('f-message').value.trim();
+    var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    var nameOk = name.length >= 2;
+    var emailOk = emailRe.test(email);
+    var subjectOk = subject.length >= 2;
+    var messageOk = message.length >= 10;
+
+    setError('row-name', !nameOk);
+    setError('row-email', !emailOk);
+    setError('row-subject', !subjectOk);
+    setError('row-message', !messageOk);
+
+    if (nameOk && emailOk && subjectOk && messageOk){
+      successBox.classList.add('show');
+      form.reset();
+      ['row-name','row-email','row-subject','row-message'].forEach(function(id){ setError(id, false); });
+    } else {
+      var firstInvalid = form.querySelector('.form-row.has-error .form-input, .form-row.has-error .form-textarea');
+      if (firstInvalid) firstInvalid.focus();
+    }
+  });
+  ['f-name','f-email','f-subject','f-message'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', function(){
+      var rowId = 'row-' + id.split('-')[1];
+      var row = document.getElementById(rowId);
+      if (row.classList.contains('has-error')) setError(rowId, false);
+    });
+  });
+
+  /* ---------- Download CV placeholder ---------- */
+  var dl = document.getElementById('downloadCvBtn');
+  dl.addEventListener('click', function(e){
+    e.preventDefault();
+    dl.textContent = 'Add your CV file link';
+    setTimeout(function(){ dl.textContent = 'Download CV'; }, 1800);
+  });
+})();
+</script>
+</body>
+</html>
